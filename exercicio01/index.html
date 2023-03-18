@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora do dia</title>
+</head>
+<body id="ifundo">
+    <h1>
+        Hora do Dia
+    </h1>
+    <section>
+        <p id="imsg">
+        </p>
+        <div id="iimg">
+        </div>
+    </section>
+    <p>
+        <a href="https://github.com/mateusrodrigues0904">@mateusrodrigues0904</a>
+    </p>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var fundo = window.document.getElementById("ifundo")
+        var img = window.document.getElementById("iimg")
+        var msg = window.document.getElementById("imsg")
+        msg.innerHTML = `<p>Agora são ${hora} horas.</p>`
+        if(hora >= 0 && hora <6){
+            fundo.style.background = "#4b4b4b"
+            img.style.backgroundImage = "url(img/noite.jpg)"
+            img.style.backgroundPosition = "top"
+        }
+        else if(hora >= 6 && hora < 12){
+            fundo.style.background = "#e0d683b4"
+            img.style.backgroundImage = "url(img/manha.jpg)"
+            img.style.backgroundPosition = "bottom"
+        }
+        else if(hora >= 12 && hora < 18){
+            fundo.style.background = "#FC940A"
+            img.style.backgroundImage = "url(img/tarde.jpg)"
+            img.style.backgroundPosition = "center bottom"
+        }
+        else if(hora >= 18 && hora <= 23){
+            fundo.style.background = "#4b4b4b"
+            img.style.backgroundImage = "url(img/noite.jpg)"
+            img.style.backgroundPosition = "top"
+        }
+    </script>
+</body>
+</html>

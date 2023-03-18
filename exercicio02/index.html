@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Verificador de idade</title>
+  </head>
+  <body>
+    <h1>Verificador de idade</h1>
+    <div class="container">
+      <div class="container-inside">
+        <label for="inas">Ano de nascimento: </label>
+        <input type="number" name="nas" id="inas" />
+        <br />
+        <p>Sexo:</p>
+        <input type="radio" name="sexo" id="imas" value="M" />
+        <label for="imas">Masculino</label>
+        <input type="radio" name="sexo" id="ifem" value="F" />
+        <label for="ifem">Feminino</label>
+        <br />
+        <input type="submit" value="Verificar" onclick="verificar()" />
+        <div class="containerjs">
+          <p id="imsg">asdada</p>
+          <div id="iimg"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function verificar() {
+        var i, nascimento, idade, sexo, msg, img;
+        msg = document.getElementById("imsg");
+        img = document.getElementById("iimg");
+        nascimento = document.getElementById("inas");
+        nascimento = nascimento.value;
+        idade = 2023 - nascimento;
+        sexo = document.getElementsByName("sexo");
+        for (i = 0; i < sexo.length; i++) {
+          if (sexo[i].checked) {
+            sexo = sexo[i].value;
+          }
+        }
+        if (sexo == "M") {
+          msg.innerHTML = `Detectamos um Homem com ${idade} anos.`;
+          if (idade <= 10) {
+            img.style.backgroundImage = "url('img/mcrianca.jpg')";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

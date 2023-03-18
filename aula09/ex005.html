@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(107, 133, 141);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando Estudos com DOM
+    </h1>
+    <p>
+        Aqui vai o resultado
+    </p>
+    <p>
+        Aprendendo a usar o <strong>DOM</strong> em JavaScript
+    </p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <br>
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo magnam commodi repudiandae nobis nihil, autem quisquam maiores asperiores! Perspiciatis porro suscipit eligendi ipsam commodi. Ullam quibusdam distinctio iure obcaecati deserunt.
+    </div>
+    <br>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum tenetur facere corporis veniam sint. Accusantium ab eaque illo error quae repellat mollitia autem asperiores fugit? Eos laboriosam sunt temporibus!
+    </div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName("p")[0]
+        window.document.write(p1.innerText)
+        // var d = window.document.getElementById("msg")
+        // d.style.background = "pink"
+        // d.innerText = "Estou aguardando..."
+
+        // var d = window.document.getElementsByName("msg")[0]
+        // d.innerText = "Olá!"
+
+        var d = window.document.querySelector("div#msg")
+        d.style.background = "pink"
+        </script>
+</body>
+</html>

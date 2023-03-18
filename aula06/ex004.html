@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual é o seu nome?")
+        document.write(`seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`)
+        document.write(`seu nome em minúsculas é ${nome.toLowerCase()}<br/>`)
+        document.write(`----------------------------------------------------<br/>`)
+        var n1 = 1234.4
+        n1.toFixed(2).replace(".", ",")
+        document.write(`O número formatado fica assim: ${n1.toFixed(2).replace(".", ",")}<br/>`)
+        document.writeln("Exemplo de salário: ")
+        document.writeln(`${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

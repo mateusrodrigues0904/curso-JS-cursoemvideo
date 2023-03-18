@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > h1 {
+  text-align: center;
+  margin: 2rem;
+}
+.container {
+  background-color: pink;
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+}
+.container-inside {
+  padding: 20px 20px;
+}
+.container-inside label,
+input,
+p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+.container-inside > p {
+  display: inline-block;
+}
+.containerjs p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.containerjs div {
+  background-color: blue;
+  background-image: url(../img/mcrianca.jpg);
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
