@@ -5,15 +5,20 @@
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background-color: #343a40;
+}
 body > h1 {
   text-align: center;
   margin: 2rem;
+  color: white;
 }
 .container {
-  background-color: pink;
+  background-color: #adb5bd;
   width: 70vw;
-  height: 50vh;
   margin: auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.466);
 }
 .container-inside {
   padding: 20px 20px;
@@ -24,6 +29,15 @@ p {
   margin-top: 10px;
   font-size: 1.4rem;
 }
+.button {
+  background-color: #6c757d;
+  border: none;
+  padding: 2px;
+  color: white;
+}
+.button:hover {
+  background-color: #555c63;
+}
 .container-inside > p {
   display: inline-block;
 }
@@ -32,8 +46,11 @@ p {
   margin-bottom: 10px;
 }
 .containerjs div {
-  background-color: blue;
-  background-image: url(../img/mcrianca.jpg);
+  display: none;
+  background-color: #343a40;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: auto;
   height: 300px;
   width: 300px;
